@@ -94,7 +94,7 @@ pm2 list # Show status of applications managed by PM2
 
 # --- Clear Screen and Conditional .env Update ---
 clear
-read -r -p "Do you want to update the .env file (username, password, webhook)? (y/N): " UPDATE_CHOICE
+read -r -p "Do you want to update the .env file (username, password, webhook, platform)? (y/N): " UPDATE_CHOICE
 
 # Convert choice to lowercase for case-insensitive comparison (Y/y)
 # Default to 'n' if user just presses Enter
@@ -121,6 +121,8 @@ if [ "$UPDATE_CHOICE_LOWER" = "y" ]; then
 
     read -r -p "Please enter your Discord webhook URL: " DISCORD
 
+     read -r -p "Please enter your Desired Platform: " PLATFORM
+
     echo "Creating/Overwriting .env file with new credentials..."
     # WARNING: This overwrites the entire .env file. Any other variables
     # previously in .env (restored from backup) will be lost unless added here.
@@ -128,6 +130,7 @@ if [ "$UPDATE_CHOICE_LOWER" = "y" ]; then
       echo "USERE=$USERNAME"
       echo "USERP=$PASSWORD"
       echo "DISCORDWEBHOOK=$DISCORD"
+      echo "PLATFORM=$PLATFORM"
       # Add any other essential default variables here if needed
     } > "$ENV_FILE" # Ensure this writes to the correct .env file path in the current directory
 

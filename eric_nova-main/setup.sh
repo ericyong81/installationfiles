@@ -21,7 +21,7 @@ echo ""
 read -r -p "Please enter your Discord webhook: " DISCORD
 read -r -p "Please enter Desired Platform Code: " PLATFORM
 # Validate inputs
-if [[ -z "$USERNAME" || -z "$PASSWORD" || -z "$DISCORD"  || -z "$PLATFORM"]]; then
+if [[ -z "$USERNAME" || -z "$PASSWORD" || -z "$DISCORD" || -z "$PLATFORM" ]]; then
   echo "Error: All fields are required."
   exit 1
 fi
