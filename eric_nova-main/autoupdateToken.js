@@ -47,7 +47,7 @@ async function getOpenPositionList(config) {
       authURL = 'https://z34vshibtebtaneovwkqpe5vme0hkexs.lambda-url.eu-north-1.on.aws/'
     }
     else{
-      authURL = 'https://7xsskotpbpeuyqmim4f3wl4j4i0qvtuu.lambda-url.eu-north-1.on.aws/'
+      authURL = 'https://ukxrhyq4te7nxrqbvlpx2fbwge0jpzak.lambda-url.ap-southeast-1.on.aws/'
     }
     const response = await fetch(authURL,{
       method: 'POST',
